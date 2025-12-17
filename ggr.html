@@ -9,7 +9,14 @@
       location.href = targetUrl
       const appEl = document.getElementById(`app`)
       if (appEl) {
-        appEl.innerHTML = `<a href="${targetUrl}">页面未跳转？点击此处以进行跳转</a>`
+        appEl.innerHTML = `<div>
+          <div>
+            <a href="${targetUrl}">正在跳转中……页面未跳转？点击此处以进行跳转</a>
+          </div>
+          <div>
+            你也可以复制这个链接并打开：<div>${targetUrl}</div>
+          </div>
+        </div>`
       }
     </script>
   </body>
