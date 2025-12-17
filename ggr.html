@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>这是一个跳转页面</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const targetUrl = [104, 116, 116, 112, 115, 58, 47, 47, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 47, 103, 101, 101, 107, 103, 101, 101, 107, 114, 117, 110, 47, 103, 101, 101, 107, 103, 101, 101, 107, 114, 117, 110].map(it => String.fromCharCode(parseInt(it, 10))).join('')
+      location.href = targetUrl
+      const appEl = document.getElementById(`app`)
+      if (appEl) {
+        appEl.innerHTML = `<a href="${targetUrl}">页面未跳转？点击此处以进行跳转</a>`
+      }
+    </script>
+  </body>
+</html>
